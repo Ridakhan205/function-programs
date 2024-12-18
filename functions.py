@@ -12,11 +12,10 @@ def determine_grade(average):
         return 'D'
     if average<60:
         return 'F'
-    
-scores_input = input("Enter 5 scores separated by spaces: ").split()
-scores = []
-for score in scores_input:
-    scores.append(float(score))
+scores=[]
+scores=input("enter 5 scores by using space").split()
+for score in scores:
+   scores.append(int(scores))
 average=calc_average(scores)
 grade=determine_grade(average)
 print(f"the average of numbers is {average}")
