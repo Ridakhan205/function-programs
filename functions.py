@@ -1,22 +1,27 @@
 def calc_average(scores):
-    return sum(scores)/len(scores)
+    return sum(scores) / len(scores)
 
 def determine_grade(average):
-    if average>=90 or average<=100:
+    if 90 <= average <= 100:
         return 'A'
-    if average>=80 or average<=89:
+    elif 80 <= average < 90:
         return 'B'
-    if average>=70 or average<=79:
+    elif 70 <= average < 80:
         return 'C'
-    if average>=60 or average<=69:
+    elif 60 <= average < 70:
         return 'D'
-    if average<60:
+    else:
         return 'F'
-scores=[]
-scores=input("enter 5 scores by using space").split()
-for score in scores:
-   scores.append(int(scores))
-average=calc_average(scores)
-grade=determine_grade(average)
-print(f"the average of numbers is {average}")
-print(f"the grade of your is{grade}")
+
+scores = []
+input_scores = input("Enter 5 scores separated by spaces: ").split()
+
+for score in input_scores:
+    scores.append(int(score))  
+
+average = calc_average(scores)
+grade = determine_grade(average)
+
+print(f"The average of the numbers is {average:.2f}")
+print(f"The grade for your average is {grade}")
+
